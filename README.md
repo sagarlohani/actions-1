@@ -1,1 +1,1 @@
-# actions-1
+# learning Github Actions for automation
