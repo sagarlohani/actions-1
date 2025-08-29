@@ -6,13 +6,7 @@ jobs:
       steps:
         - name: Checkout
           uses: actions/checkout@v5
-        - name: Install Cowsay Program
-          run: sudo apt-get install cowsay -y
-        - name: Execute Cowsay
-          run: cowsay -f dragon "Run for over, I am a dragon...RRR" >> dragon.txt
-        - name: Test File exists
-          run: grep -i "dragon" dragon.txt
-        - name: Read File
-          run: cat dragon.txt
-        - name: List Repo File
+        - name: List File
           run: ls -ltra
+        - name: Executing shell script
+          run: ./ascii-script.sh
