@@ -8,9 +8,17 @@ jobs:
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v5
-            - name: Welcome message
-              run: echo "Hello Gihub Actions"
-            - name: List files
-              run: ls
-            - name: Read File
-              run: cat README.md
+
+            - name: List and Read File
+              run: |
+                   echo "Hello Gihub Actions"
+                   ls -ltra
+                   cat README.md
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a dragon...RAWR" >> dragon.txt
+
+            # - name: List files
+            #   run: ls
+
+            # - name: Read File
+            #   run: cat README.md
